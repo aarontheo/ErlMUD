@@ -82,14 +82,14 @@ Record all CSE 310 work that you do on your individual module or the team projec
 
 Note that `IM` stands for Individual Module and `TP` stands for Team Project.  
 
-| Date   | Start Time | IM or TP | Description                            | Hours:Minutes |
-| ------ | ---------- | -------- | -------------------------------------- | ------------- |
-| Jun 10 | 10:15      | IM       | Planned out some things for my project | 1:00          |
-| Jun 11 | 10:00      | IM       | Filled out some of the design document | 0:30          |
-|        |            |          |                                        |               |
-|        |            |          |                                        |               |
-|        |            |          |                                        |               |
-|        |            |          |                                        |               |
+| Date   | Start Time | IM or TP | Description                                                                      | Hours:Minutes |
+| ------ | ---------- | -------- | -------------------------------------------------------------------------------- | ------------- |
+| Jun 10 | 10:15      | IM       | Planned out some things for my project                                           | 1:00          |
+| Jun 11 | 10:00      | IM       | Filled out some of the design document                                           | 0:30          |
+| Jun 13 | 10:00      | IM       | Added more to the design doc, began building some functions in the syntax parser | 0:30          |
+|        |            |          |                                                                                  |               |
+|        |            |          |                                                                                  |               |
+|        |            |          |                                                                                  |               |
 
 _Note: Add more rows as needed._
 

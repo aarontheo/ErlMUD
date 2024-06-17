@@ -15,4 +15,8 @@ defmodule ErlmudClient do
   def hello do
     :world
   end
+
+  def client_loop() do
+
+  end
 end
