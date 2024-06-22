@@ -16,7 +16,6 @@ Should I use the ECS (Entity-Component-System) paradigm?
     - [Success messages](#success-messages)
     - [Failure messages](#failure-messages)
   - [WEM (World Event Manager/Dungeon Master)](#wem-world-event-managerdungeon-master)
-  - [Map Loader](#map-loader)
   - [Player Registry](#player-registry)
   - [Door Registry](#door-registry)
   - [Object Registry](#object-registry)
@@ -27,6 +26,7 @@ Should I use the ECS (Entity-Component-System) paradigm?
   - [Flags](#flags)
   - [JSON](#json)
   - [State Machine Structure:](#state-machine-structure)
+- [Map Loader](#map-loader)
 
 ---
 # Frontend (Client)
@@ -91,11 +91,6 @@ Manages events in the game world, allowing for actions taken in one zone to affe
 May communicate with the TRG notify user of events in other zones, ex. 
 "You hear a deep rumbling from the banquet hall."
 
-## Map Loader
-Initializes the game world from JSON files.
-When each door is loaded from the JSON file, it is added to the door registry and the door's source and destination zones are given a link to the door's registry entry.
-
-
 ## Player Registry
 Each player character is just a normal entity, but is linked to a particular client which is connected.
 When a player logs in, they are prompted for a name, and then the player registry is updated with the new player entity. If the name already exists, the player is prompted to choose a different name.
@@ -115,6 +110,7 @@ Stores the behavior and properties of objects in the game world.
 A request sent by the client to the server to perform an action in the game world.
 Action requests can both modify the game world and query the game world for information.
 
+---
 # Things (Objects, Entities, Zones)
 All 'things' in the game are represented as state machines.
 All attributes are stored in the machine's state.
@@ -135,10 +131,14 @@ Implies:
 - 'capacity': The maximum number of children the container can hold
 - 
 
-
 ## JSON
 Object JSON templates the creation of objects (meaning all entities, zones, and objects)
 
 ## State Machine Structure:
 **Type:** A state machine's type can be either 'zone', 'entity', 'player_entity'.
 **Parent:** The state machine this statem's objectis contained within.
+
+---
+# Map Loader
+The map loader is a system that reads JSON files and creates the game world from them.
+Because the game world is represented as a hierarchy of state machines, the representation to load in the game world is actually structured as a folder hierarchy, with folders representing all things in the game world, and JSON files representing the properties of those things.
